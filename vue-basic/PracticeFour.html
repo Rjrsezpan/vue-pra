@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PracticeFour</title>
+</head>
+<body>
+<div id="app">
+    <input type="submit" value="立即送出" v-on:click="clickMe"/>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        methods: {
+            clickMe: function () {
+                alert("Vue practice")
+            },
+        }
+    })
+</script>
+</body>
+</html>

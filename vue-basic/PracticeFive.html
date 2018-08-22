@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PracticeFive</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>目前點擊次數:{{count}}</p>
+    <input type="button" value="+1" @click="clickme">
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            count: 0
+        },
+        methods: {
+            clickme: function () {
+                this.count += 1;
+            }
+        }
+    })
+</script>
+</body>
+</html>

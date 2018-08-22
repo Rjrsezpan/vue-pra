@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PracticeTwo</title>
+</head>
+<body>
+<div id='app'>
+    <p>{{message}}</p>
+    <input type="text" v-model="message"/>
+    {{$data | json}}
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+<script>
+    var data = {
+        message : 'Hello World'
+    }
+    new Vue({
+        el : '#app',
+        data: data
+    })
+</script>
+</body>
+</html>

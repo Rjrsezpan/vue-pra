@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PracticeThree</title>
+</head>
+<body>
+<div id='app'>
+    <h1>{{score}}分</h1>
+    <p>你覺得vue.js簡單嗎？請輸入1~10分</p>
+    <input type="text" v-model="score"/>
+    <div v-show="score">
+        <p v-if="score >=6">還OK</p>
+        <p v-else="score>6">不簡單</p>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+
+        data: {
+            score: '0'
+        }
+    });
+</script>
+</body>
+</html>

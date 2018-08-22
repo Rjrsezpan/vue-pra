@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vbind-pra-02</title>
+</head>
+<body>
+<div id="app">
+    <p v-bind:style="myStyle">This is a practice</p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.4/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            myStyle: {
+                color: 'red',
+                fontSize: '30px'
+            }
+        }
+    });
+</script>
+</body>
+</html>
