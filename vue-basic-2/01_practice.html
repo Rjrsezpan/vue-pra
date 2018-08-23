@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_practice</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    {{message}}
+</div>
+<script>
+    var app = new Vue({
+        //Vue 的掛載點
+        el: "#app",
+        //自訂義數據
+        data: {
+            message: "Hello Vue !!!"
+        }
+    });
+</script>
+</body>
+</html>

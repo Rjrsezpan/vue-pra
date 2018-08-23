@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06_重要組件選項</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style type="text/css">
+        .test {
+            width: 150px;
+            height: 150px;
+            margin: 30px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="view">
+    {{msg}}
+    <div class="test" @click="speak"></div>
+    <div class="test" @click="run"></div>
+    <div class="test" @click="add"></div>
+    {{i}}
+    {{strFn}}
+</div>
+<script>
+    var run = function () {
+        alert('run')
+    }
+
+    var app = new Vue({
+        el: '#view',
+        data: {
+            msg: 'Hello Vue',
+            i: 0
+        },
+        methods: {
+            run: run,
+            speak: function () {
+                alert('speak')
+            },
+            add: function () {
+                this.i++;
+            }
+        },
+        computed: {//計算屬性
+            strFn: function () {
+                if (this.i <= 5) {
+                    return '加油'
+                } else if (this.i <= 10) {
+                    return '繼續加油'
+                } else {
+                    return '恭喜達成目標'
+                }
+            }
+        },
+        watch: {//堅聽屬性
+            i: function (newValue, oldValue) {
+                console.log(newValue, oldValue)
+            }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03_事件綁定</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .show {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <p class="show" v-on:click="speak"></p>
+    <p class="show" @click="speak"></p>
+</div>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {},
+        methods: {
+            speak: function () {
+                alert("Hello World !!!")
+            }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02_數據渲染</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style type="text/css">
+        .show {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <!--
+    v-text 標籤的CONTENT
+    v-html 標籤的innerHtml
+    -->
+    <p v-text="msg"></p>
+    <p v-html="msg"></p>
+    <p v-text="title"></p>
+    <p v-html="title"></p>
+    <!--控制模塊顯示-->
+    <p class="show" v-if="isShow"></p>
+    <p class="show" v-show="isShow"></p>
+    <!--循環渲染-->
+    <ul>
+        <li v-for="item in arr">{{item}}</li>
+    </ul>
+</div>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            msg: "Hello World",
+            title: "<h2>指令練習</h2>",
+            isShow: false,
+            arr:['HTML','CSS','JavaScript','Java']
+        }
+    })
+</script>
+</body>
+</html>
